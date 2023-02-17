@@ -112,7 +112,6 @@ public class ToDoListGUI {
         }
     }
 
-    // Define the main method to run the GUI
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

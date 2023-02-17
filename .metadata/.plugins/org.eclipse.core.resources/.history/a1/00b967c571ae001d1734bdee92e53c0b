@@ -99,7 +99,6 @@ public class ToDoListGUI {
     }
 
     private void editTask() {
-        // Edit the selected task in the list
         int index = taskList.getSelectedIndex();
         if (index >= 0) {
             String task = tasks.get(index);
@@ -112,7 +111,6 @@ public class ToDoListGUI {
         }
     }
 
-    // Define the main method to run the GUI
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

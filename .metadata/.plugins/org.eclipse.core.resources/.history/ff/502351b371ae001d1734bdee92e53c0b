@@ -61,12 +61,10 @@ public class ToDoListGUI {
         inputPanel.add(textField);
         inputPanel.add(addButton);
 
-        // Create a panel for the action buttons
         JPanel buttonPanel = new JPanel(new GridLayout(1, 3));
         buttonPanel.add(removeButton);
         buttonPanel.add(editButton);
-        
-        // Create the main frame and add components to it
+
         frame = new JFrame("To-Do List");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(listScrollPane, BorderLayout.CENTER);
@@ -76,9 +74,7 @@ public class ToDoListGUI {
         frame.setVisible(true);
     }
 
-    // Define methods for adding, removing, and editing tasks
     private void addTask() {
-        // Add a new task to the list
         String task = textField.getText();
         if (!task.isEmpty()) {
             tasks.add(task);
@@ -88,7 +84,6 @@ public class ToDoListGUI {
     }
 
     private void removeTask() {
-        // Remove the selected task from the list
         int index = taskList.getSelectedIndex();
         if (index >= 0) {
             String task = tasks.get(index);
@@ -99,7 +94,6 @@ public class ToDoListGUI {
     }
 
     private void editTask() {
-        // Edit the selected task in the list
         int index = taskList.getSelectedIndex();
         if (index >= 0) {
             String task = tasks.get(index);
@@ -112,7 +106,6 @@ public class ToDoListGUI {
         }
     }
 
-    // Define the main method to run the GUI
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
